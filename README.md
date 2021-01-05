@@ -1,6 +1,7 @@
 # goshawk
 
-An opinionated, configurable RTS camera for [bevy](https://bevy.rs). 
+An opinionated, configurable RTS (real-time-strategy) camera for [bevy](https://bevy.rs). It is somewhat inspired by the
+Rome: Total War camera.
 
 ## Example
 
