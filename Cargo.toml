@@ -1,8 +1,15 @@
 [package]
-name = "bevy_rts_camera"
+name = "goshawk"
+description = "An RTS camera for bevy"
 version = "0.1.0"
+documentation = "https://docs.rs/goshawk"
+readme = "README.md"
+keywords = ["bevy", "camera", "rts", "gamedev", "3d"]
+categories = ["game-development"]
 authors = ["Restioson <restiosondev@gmail.com>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+exclude = ["example.mp4"]
 
 [dependencies]
 bevy = { version = "0.4", default-features = false }

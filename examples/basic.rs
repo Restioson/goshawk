@@ -2,7 +2,7 @@ use bevy::prelude::*;
 use bevy::render::mesh::shape::Cube;
 use bevy::pbr::PbrBundle;
 use bevy::window::WindowMode;
-use bevy_rts_camera::{rts_camera_system, RtsCamera, ZoomSettings, PanSettings};
+use goshawk::{rts_camera_system, RtsCamera, ZoomSettings, PanSettings};
 use itertools::Itertools;
 
 fn main() {
