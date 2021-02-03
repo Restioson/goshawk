@@ -213,12 +213,16 @@ impl RtsCamera {
             self.pan_velocity = pan.max_speed * self.pan_velocity.normalize();
         }
 
-        self.zoom_velocity = f32::min(self.zoom_velocity, zoom.max_velocity);
+        self.zoom_velocity = clamp(self.zoom_velocity, &(-zoom.max_velocity..=zoom.max_velocity));
         self.turn_velocity = clamp(self.turn_velocity, &(-turn.max_speed..=turn.max_speed));
 
         // Apply zoom velocity
         self.zoom_distance += self.zoom_velocity * delta;
         self.zoom_distance = clamp(self.zoom_distance, &zoom.distance_range);
+
+        if self.zoom_distance == *zoom.distance_range.start() || self.zoom_distance == *zoom.distance_range.end() {
+            self.zoom_velocity = 0.0;
+        }
 
         // Apply turn velocity
         self.rotate(self.turn_velocity * delta);
