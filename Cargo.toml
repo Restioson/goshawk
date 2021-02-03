@@ -1,7 +1,7 @@
 [package]
 name = "goshawk"
 description = "An RTS camera for bevy"
-version = "0.1.0"
+version = "0.1.1"
 documentation = "https://docs.rs/goshawk"
 readme = "README.md"
 keywords = ["bevy", "camera", "rts", "gamedev", "3d"]
